@@ -7,7 +7,7 @@ export default function Welcome() {
 
     const handlePlayClick = () => {
         analytics.playClicked();
-        navigate('/play');
+        navigate('/select-player');
     };
 
     const handleLeaderboardsClick = () => {
