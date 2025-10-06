@@ -310,11 +310,11 @@ class CatFactService {
                 [isActive ? 1 : 0, ...factIds]
             );
 
-            if (result.changes && result.changes > 0) {
+            if (result.affectedRows && result.affectedRows > 0) {
                 this.clearFactCaches();
             }
 
-            return result.changes || 0;
+            return result.affectedRows || 0;
         } catch (error) {
             console.error('Error batch updating facts:', error);
             return 0;
